@@ -19,7 +19,7 @@
         <h3>Primeiro, seu prato</h3>
         <div class="menu-prato">
           <!--prato 1-->
-          <div onclick="addBordaP1()" class="p1 caixa-prato ativo">
+          <div onclick="addBordaP(this)" class="caixa-prato">
             <div class="caixa-texto">
               <img src="./img/frango.png" />
               <h4>Frango Yin Yang</h4>
@@ -31,7 +31,7 @@
             </div>
           </div>
           <!--prato 2-->
-          <div onclick="addBordaP2()" class="p2 caixa-prato">
+          <div onclick="addBordaP(this)" class="caixa-prato">
             <div class="caixa-texto">
               <img src="./img/xburguer.jpg" />
               <h4>X burguer</h4>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <!--prato 3-->
-          <div onclick="addBordaP3()" class="p3 caixa-prato">
+          <div onclick="addBordaP(this)" class="caixa-prato">
             <div class="caixa-texto">
               <img src="./img/temaki.png" />
               <h4>Temaki</h4>
@@ -55,7 +55,7 @@
             </div>
           </div>
           <!--prato 4-->
-          <div onclick="addBordaP4()" class="p4 caixa-prato">
+          <div onclick="addBordaP(this)" class="caixa-prato">
             <div class="caixa-texto">
               <img src="./img/feijuca.jpg" />
               <h4>A Feijoada</h4>
@@ -67,7 +67,7 @@
             </div>
           </div>
           <!--prato 5-->
-          <div onclick="addBordaP5()" class="p5 caixa-prato">
+          <div onclick="addBordaP(this)" class="caixa-prato">
             <div class="caixa-texto">
               <img src="./img/miojo.jpg" />
               <h4>Miojo</h4>
@@ -83,9 +83,9 @@
       <!--menu dos prato termina aqui-->
       <div class="menu">
         <h3>Agora, sua bebida</h3>
-        <div class="menu-prato">
+        <div class="menu-bebida">
           <!--bebida 1-->
-          <div onclick="addBordaB1()" class="b1 caixa-bebida">
+          <div onclick="addBordaB(this)" class="caixa-bebida">
             <div class="caixa-texto">
               <img src="./img/coke.png" />
               <h4>Coquinha gelada</h4>
@@ -97,7 +97,7 @@
             </div>
           </div>
           <!--bebida 2-->
-          <div onclick="addBordaB2()" class="b2 caixa-bebida ativo">
+          <div onclick="addBordaB(this)" class="caixa-bebida">
             <div class="caixa-texto">
               <img src="./img/guarana.jpg" />
               <h4>Guaraná zero</h4>
@@ -109,7 +109,7 @@
             </div>
           </div>
           <!--bebida 3-->
-          <div onclick="addBordaB3()" class="b3 caixa-bebida">
+          <div onclick="addBordaB(this)" class="caixa-bebida">
             <div class="caixa-texto">
               <img src="./img/jesus.jpg" />
               <h4>Jesus</h4>
@@ -121,7 +121,7 @@
             </div>
           </div>
           <!--bebida 4-->
-          <div onclick="addBordaB4()" class="b4 caixa-bebida">
+          <div onclick="addBordaB(this)" class="caixa-bebida">
             <div class="caixa-texto">
               <img src="./img/agua.jpg" />
               <h4>Água</h4>
@@ -133,7 +133,7 @@
             </div>
           </div>
           <!--bebida 5-->
-          <div onclick="addBordaB5()" class="b5 caixa-bebida">
+          <div onclick="addBordaB(this)" class="caixa-bebida">
             <div class="caixa-texto">
               <img src="./img/laranja.jpg" />
               <h4>Suco de laranja</h4>
@@ -149,9 +149,9 @@
       <!--menu das bebida termina aqui-->
       <div class="menu">
         <h3>Primeiro, seu prato</h3>
-        <div class="menu-prato">
+        <div class="menu-sobremesa">
           <!--sobremesa 1-->
-          <div onclick="addBordaS1()" class="s1 caixa-sobremesa">
+          <div onclick="addBordaS(this)" class="caixa-sobremesa">
             <div class="caixa-texto">
               <img src="./img/pudim.png" />
               <h4>Pudim</h4>
@@ -163,7 +163,7 @@
             </div>
           </div>
           <!--sobremesa 2-->
-          <div onclick="addBordaS2()" class="s2 caixa-sobremesa ativo">
+          <div onclick="addBordaS(this)" class="caixa-sobremesa">
             <div class="caixa-texto">
               <img src="./img/torta-de-limao.jpg" />
               <h4>Torta</h4>
@@ -175,7 +175,7 @@
             </div>
           </div>
           <!--sobremesa 3-->
-          <div onclick="addBordaS3()" class="s3 caixa-sobremesa">
+          <div onclick="addBordaS(this)" class="caixa-sobremesa">
             <div class="caixa-texto">
               <img src="./img/cookies.jpg" />
               <h4>Cookies</h4>
@@ -187,7 +187,7 @@
             </div>
           </div>
           <!--sobremesa 4-->
-          <div onclick="addBordaS4()" class="s4 caixa-sobremesa">
+          <div onclick="addBordaS(this)" class="caixa-sobremesa">
             <div class="caixa-texto">
               <img src="./img/cheesecake.jpg" />
               <h4>Cheesecake</h4>
@@ -199,7 +199,7 @@
             </div>
           </div>
           <!--sobremesa 5-->
-          <div onclick="addBordaS5()" class="s5 caixa-sobremesa">
+          <div onclick="addBordaS(this)" class="caixa-sobremesa">
             <div class="caixa-texto">
               <img src="./img/dango.jpg" />
               <h4>Dango</h4>
@@ -216,13 +216,13 @@
     </div>
     <!-- corpo termina aqui -->
     <div class="rodape">
-      <button class="selecione escondido">
+      <button class="selecione">
         <h6>
           Selecione os 3 itens<br />
           para fechar o pedido
         </h6>
       </button>
-      <button onclick="containerConfirma()" class="fechar">
+      <button onclick="containerConfirma()" class="fechar escondido">
         <h6>Fechar pedido</h6>
       </button>
     </div>

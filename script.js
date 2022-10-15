@@ -1,86 +1,61 @@
-function addBordaP1() {
-  const borda = document.querySelector(".p1");
-  borda.classList.toggle("ativo");
+let pratoSelecionado;
+let bebidaSelecionado;
+let sobremesaSelecionado;
+let R$bebida;
+let R$prato;
+let R$sobremesa;
+
+function addBordaP(prato) {
+  const tirarBorda = document.querySelector('.menu-prato .ativo');
+  if (tirarBorda !== null) {
+    tirarBorda.classList.remove('ativo');
+  }
+  prato.classList.toggle('ativo');
+  pratoSelecionado = prato.innerHTML;
+  liberarBotaoFecharPedido();
 }
 
-function addBordaP2() {
-  const borda = document.querySelector(".p2");
-  borda.classList.toggle("ativo");
+function addBordaB(bebida) {
+  const tirarBorda = document.querySelector('.menu-bebida .ativo');
+  if (tirarBorda !== null) {
+    tirarBorda.classList.remove('ativo');
+  }
+  bebida.classList.toggle('ativo');
+  bebidaSelecionado = bebida.innerHTML;
+  liberarBotaoFecharPedido();
 }
 
-function addBordaP3() {
-  const borda = document.querySelector(".p3");
-  borda.classList.toggle("ativo");
+function addBordaS(sobremesa) {
+  const tirarBorda = document.querySelector('.menu-sobremesa .ativo');
+  if (tirarBorda !== null) {
+    tirarBorda.classList.remove('ativo');
+  }
+  sobremesa.classList.toggle('ativo');
+  sobremesaSelecionado = sobremesa.innerHTML;
+  liberarBotaoFecharPedido();
 }
 
-function addBordaP4() {
-  const borda = document.querySelector(".p4");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaP5() {
-  const borda = document.querySelector(".p5");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaB1() {
-  const borda = document.querySelector(".b1");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaB2() {
-  const borda = document.querySelector(".b2");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaB3() {
-  const borda = document.querySelector(".b3");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaB4() {
-  const borda = document.querySelector(".b4");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaB5() {
-  const borda = document.querySelector(".b5");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaS1() {
-  const borda = document.querySelector(".s1");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaS2() {
-  const borda = document.querySelector(".s2");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaS3() {
-  const borda = document.querySelector(".s3");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaS4() {
-  const borda = document.querySelector(".s4");
-  borda.classList.toggle("ativo");
-}
-
-function addBordaS5() {
-  const borda = document.querySelector(".s5");
-  borda.classList.toggle("ativo");
+function liberarBotaoFecharPedido() {
+  if (pratoSelecionado !== undefined) {
+    if (bebidaSelecionado !== undefined) {
+      if (sobremesaSelecionado !== undefined) {
+        let botaoSelecionar = document.querySelector('.selecione');
+        botaoSelecionar.classList.add('escondido');
+        let botaoFechar = document.querySelector('.fechar');
+        botaoFechar.classList.remove('escondido');
+      }
+    }
+  }
 }
 
 function containerConfirma() {
-  const container = document.querySelector(".container-confirma");
-  container.classList.remove("escondido");
+  const container = document.querySelector('.container-confirma');
+  container.classList.remove('escondido');
 }
 
 function cancelar() {
-  const cancel = document.querySelector(".container-confirma");
-  cancel.classList.add("escondido");
+  const cancel = document.querySelector('.container-confirma');
+  cancel.classList.add('escondido');
 }
 
 function WhatsApp() {
