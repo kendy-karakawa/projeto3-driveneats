@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>projeto3-driveneats</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <h1>DrivenEats</h1>
+      <h2>Sua comida em 6 minutos</h2>
+    </div>
+    <!-- cabecalho termina aqui  -->
+
+    <div class="corpo">
+      <div class="menu">
+        <h3>Primeiro, seu prato</h3>
+        <div class="menu-prato">
+          <!--prato 1-->
+          <div onclick="addBordaP1()" class="p1 caixa-prato ativo">
+            <div class="caixa-texto">
+              <img src="./img/frango.png" />
+              <h4>Frango Yin Yang</h4>
+              <h5>Um pouco de batata, um pouco de salada</h5>
+              <div class="preco">
+                <h6>R$ 14,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--prato 2-->
+          <div onclick="addBordaP2()" class="p2 caixa-prato">
+            <div class="caixa-texto">
+              <img src="./img/xburguer.jpg" />
+              <h4>X burguer</h4>
+              <h5>Pão, queijo e um pouco de carne</h5>
+              <div class="preco">
+                <h6>R$ 8,50</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--prato 3-->
+          <div onclick="addBordaP3()" class="p3 caixa-prato">
+            <div class="caixa-texto">
+              <img src="./img/temaki.png" />
+              <h4>Temaki</h4>
+              <h5>Um pouco de arroz, um pouco de peixe</h5>
+              <div class="preco">
+                <h6>R$ 9,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--prato 4-->
+          <div onclick="addBordaP4()" class="p4 caixa-prato">
+            <div class="caixa-texto">
+              <img src="./img/feijuca.jpg" />
+              <h4>A Feijoada</h4>
+              <h5>A receita da nossa feijoada tradicional</h5>
+              <div class="preco">
+                <h6>R$ 24,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--prato 5-->
+          <div onclick="addBordaP5()" class="p5 caixa-prato">
+            <div class="caixa-texto">
+              <img src="./img/miojo.jpg" />
+              <h4>Miojo</h4>
+              <h5>Para comer no intervalo da aula</h5>
+              <div class="preco">
+                <h6>R$ 1,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--menu dos prato termina aqui-->
+      <div class="menu">
+        <h3>Agora, sua bebida</h3>
+        <div class="menu-prato">
+          <!--bebida 1-->
+          <div onclick="addBordaB1()" class="b1 caixa-bebida">
+            <div class="caixa-texto">
+              <img src="./img/coke.png" />
+              <h4>Coquinha gelada</h4>
+              <h5>Lata 350ml</h5>
+              <div class="preco">
+                <h6>R$ 3,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--bebida 2-->
+          <div onclick="addBordaB2()" class="b2 caixa-bebida ativo">
+            <div class="caixa-texto">
+              <img src="./img/guarana.jpg" />
+              <h4>Guaraná zero</h4>
+              <h5>Lata 350ml</h5>
+              <div class="preco">
+                <h6>R$ 4,00</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--bebida 3-->
+          <div onclick="addBordaB3()" class="b3 caixa-bebida">
+            <div class="caixa-texto">
+              <img src="./img/jesus.jpg" />
+              <h4>Jesus</h4>
+              <h5>Lata 350ml</h5>
+              <div class="preco">
+                <h6>R$ 9,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--bebida 4-->
+          <div onclick="addBordaB4()" class="b4 caixa-bebida">
+            <div class="caixa-texto">
+              <img src="./img/agua.jpg" />
+              <h4>Água</h4>
+              <h5>Lata 350ml</h5>
+              <div class="preco">
+                <h6>R$ 1,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--bebida 5-->
+          <div onclick="addBordaB5()" class="b5 caixa-bebida">
+            <div class="caixa-texto">
+              <img src="./img/laranja.jpg" />
+              <h4>Suco de laranja</h4>
+              <h5>Garrafa de 250ml</h5>
+              <div class="preco">
+                <h6>R$ 9,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--menu das bebida termina aqui-->
+      <div class="menu">
+        <h3>Primeiro, seu prato</h3>
+        <div class="menu-prato">
+          <!--sobremesa 1-->
+          <div onclick="addBordaS1()" class="s1 caixa-sobremesa">
+            <div class="caixa-texto">
+              <img src="./img/pudim.png" />
+              <h4>Pudim</h4>
+              <h5>Apenas pudim</h5>
+              <div class="preco">
+                <h6>R$ 9,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--sobremesa 2-->
+          <div onclick="addBordaS2()" class="s2 caixa-sobremesa ativo">
+            <div class="caixa-texto">
+              <img src="./img/torta-de-limao.jpg" />
+              <h4>Torta</h4>
+              <h5>De limão</h5>
+              <div class="preco">
+                <h6>R$ 10,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--sobremesa 3-->
+          <div onclick="addBordaS3()" class="s3 caixa-sobremesa">
+            <div class="caixa-texto">
+              <img src="./img/cookies.jpg" />
+              <h4>Cookies</h4>
+              <h5>Apenas cookies</h5>
+              <div class="preco">
+                <h6>R$ 3,50</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--sobremesa 4-->
+          <div onclick="addBordaS4()" class="s4 caixa-sobremesa">
+            <div class="caixa-texto">
+              <img src="./img/cheesecake.jpg" />
+              <h4>Cheesecake</h4>
+              <h5>Uma fatia</h5>
+              <div class="preco">
+                <h6>R$ 20,00</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!--sobremesa 5-->
+          <div onclick="addBordaS5()" class="s5 caixa-sobremesa">
+            <div class="caixa-texto">
+              <img src="./img/dango.jpg" />
+              <h4>Dango</h4>
+              <h5>Umas bolinhas</h5>
+              <div class="preco">
+                <h6>R$ 1,90</h6>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--menu das sobremesa termina aqui-->
+    </div>
+    <!-- corpo termina aqui -->
+    <div class="rodape">
+      <button class="selecione escondido">
+        <h6>
+          Selecione os 3 itens<br />
+          para fechar o pedido
+        </h6>
+      </button>
+      <button onclick="containerConfirma()" class="fechar">
+        <h6>Fechar pedido</h6>
+      </button>
+    </div>
+    <!--bonus confirmar pedido começa aqui-->
+    <div class="container-confirma escondido">
+      <div class="confirma">
+        <h3>Confirme seu pedido</h3>
+        <div class="caixa-pedido">
+          <div class="prato">
+            <p class="texto">Frango Yin Yang</p>
+            <p class="valor">R$ 9.50</p>
+          </div>
+          <div class="bebida">
+            <p class="texto">Frango Yin Yang</p>
+            <p class="valor">R$ 9.50</p>
+          </div>
+          <div class="sobremesa">
+            <p class="texto">Frango Yin Yang</p>
+            <p class="valor">R$ 9.50</p>
+          </div>
+          <div class="total">
+            <p class="texto">total</p>
+            <p class="valor">R$ 99.50</p>
+          </div>
+        </div>
+        <button class="ok">Tudo certo, pode pedir!</button>
+        <button onclick="cancelar()" class="cancel">Cancelar</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

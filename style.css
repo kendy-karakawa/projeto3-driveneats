@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.cabecalho {
+  background-color: #cf2b2b;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  height: 92px;
+  width: 414px;
+  padding: 10px 0 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.corpo {
+  margin-top: 92px;
+  margin-bottom: 108px;
+  padding: 10px 0 0 20px;
+}
+
+h1 {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 55px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.menu-prato {
+  height: 250px;
+  width: 394px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+h3 {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  color: #333333;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 20px 0 20px 0;
+}
+
+.caixa-prato {
+  background-color: #ffffff;
+  height: 216px;
+  width: 172px;
+  padding: 15px;
+  border-radius: 9px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ativo {
+  border-color: rgb(50, 183, 47);
+  border-width: thick;
+  border-style: solid;
+}
+
+.caixa-bebida {
+  background-color: #ffffff;
+  height: 202px;
+  width: 172px;
+  padding: 15px;
+  border-radius: 9px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caixa-sobremesa {
+  background-color: #ffffff;
+  height: 197px;
+  width: 172px;
+  padding: 15px;
+  border-radius: 9px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caixa-texto {
+  width: 144px;
+  height: 87px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.preco {
+  width: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ion-icon {
+  color: #ffffff;
+}
+
+.ativo ion-icon {
+  color: rgb(50, 183, 47);
+}
+
+img {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #333333;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 5px 0;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #a6a6a6;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 5px 0;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 5px 0;
+}
+
+.rodape {
+  background-color: #ffffff;
+  width: 414px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.rodape button {
+  background-color: #cbcbcb;
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.rodape .fechar {
+  background-color: #32b72f;
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.rodape h6 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400px;
+  line-height: 23px;
+}
+
+.container-confirma {
+  /*backdrop-filter: blur(5px);*/
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.confirma {
+  background-color: #50d074;
+  width: 377px;
+  height: 353px;
+  border-radius: 9px;
+  margin-right: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 300px;
+  margin-left: 10px;
+}
+
+.confirma h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 5px 0;
+}
+
+.caixa-pedido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caixa-pedido .prato,
+.bebida,
+.sobremesa,
+.total {
+  width: 326px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.texto,
+.valor {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 5px 0;
+}
+
+.total .texto {
+  font-weight: 700;
+}
+
+.total .valor {
+  font-weight: 700;
+}
+
+.ok {
+  background-color: #ffffff;
+  width: 329px;
+  height: 52px;
+  border-radius: 100px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #50d074;
+}
+
+.cancel {
+  background-color: #50d074;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.escondido {
+  display: none;
+}
