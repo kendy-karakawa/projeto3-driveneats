@@ -124,6 +124,10 @@ h3 {
   justify-content: space-between;
 }
 
+.preco .numero {
+  display: flex;
+}
+
 ion-icon {
   color: #ffffff;
 }

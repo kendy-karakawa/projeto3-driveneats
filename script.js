@@ -11,7 +11,9 @@ function addBordaP(prato) {
     tirarBorda.classList.remove('ativo');
   }
   prato.classList.toggle('ativo');
-  pratoSelecionado = prato.innerHTML;
+  pratoSelecionado = prato.querySelector(
+    '.menu-prato .caixa-texto h4'
+  ).innerHTML;
   liberarBotaoFecharPedido();
 }
 
@@ -21,7 +23,9 @@ function addBordaB(bebida) {
     tirarBorda.classList.remove('ativo');
   }
   bebida.classList.toggle('ativo');
-  bebidaSelecionado = bebida.innerHTML;
+  bebidaSelecionado = bebida.querySelector(
+    '.menu-bebida .caixa-texto h4'
+  ).innerHTML;
   liberarBotaoFecharPedido();
 }
 
@@ -31,7 +35,9 @@ function addBordaS(sobremesa) {
     tirarBorda.classList.remove('ativo');
   }
   sobremesa.classList.toggle('ativo');
-  sobremesaSelecionado = sobremesa.innerHTML;
+  sobremesaSelecionado = sobremesa.querySelector(
+    '.menu-sobremesa .caixa-texto h4'
+  ).innerHTML;
   liberarBotaoFecharPedido();
 }
 
