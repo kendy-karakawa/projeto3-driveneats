@@ -4,6 +4,9 @@ let sobremesaSelecionado;
 let R$bebida;
 let R$prato;
 let R$sobremesa;
+let calculoTotal;
+let nome;
+let endereco;
 
 function addBordaP(prato) {
   const tirarBorda = document.querySelector('.menu-prato .ativo');
@@ -67,6 +70,21 @@ function liberarBotaoFecharPedido() {
   const valorS = document.querySelector('.caixa-pedido .sobremesa .valor');
   valorS.innerHTML = R$prato;
   /* */
+  calculoTotal =
+    converterVirguraParaPonto(R$prato) +
+    converterVirguraParaPonto(R$bebida) +
+    converterVirguraParaPonto(R$sobremesa);
+  /* */
+  const valorT = document.querySelector('.caixa-pedido .total .valor');
+  valorT.innerHTML = `R$ ${converterPontoParaVirgula(calculoTotal)}`;
+}
+
+function converterVirguraParaPonto(valor) {
+  return Number(valor.replace(/,/g, '.'));
+}
+
+function converterPontoParaVirgula(valor) {
+  return valor.toFixed(2).toString().replace('.', ',');
 }
 
 function containerConfirma() {
@@ -80,16 +98,15 @@ function cancelar() {
 }
 
 function WhatsApp() {
-  /*
-`Olá, gostaria de fazer o pedido:
-- Prato: ${Frango Yin Yang}
-- Bebida: ${Coquinha Gelada}
-- Sobremesa: ${Pudim}
-Total: R$ ${27.70}
+  let texto = `Olá, gostaria de fazer o pedido:
+  - Prato: ${pratoSelecionado}
+  - Bebida: ${bebidaSelecionado}
+  - Sobremesa: ${sobremesaSelecionado}
+  Total: R$ ${converterPontoParaVirgula(calculoTotal)}`;
 
-Nome: ${Fulano}
-Endereço: ${Rua...}`
+  let textoCodificado = encodeURIComponent(texto);
+  console.log(textoCodificado);
+  let urlWhats = `https://wa.me/5511932651411?text=${textoCodificado}`;
 
- https://wa.me/5511987641124?text=
-*/
+  window.open(urlWhats);
 }
