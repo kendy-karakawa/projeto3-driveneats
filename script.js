@@ -11,9 +11,8 @@ function addBordaP(prato) {
     tirarBorda.classList.remove('ativo');
   }
   prato.classList.toggle('ativo');
-  pratoSelecionado = prato.querySelector(
-    '.menu-prato .caixa-texto h4'
-  ).innerHTML;
+  pratoSelecionado = prato.querySelector('h4').innerHTML;
+  R$prato = prato.querySelector('.num').innerHTML;
   liberarBotaoFecharPedido();
 }
 
@@ -23,9 +22,8 @@ function addBordaB(bebida) {
     tirarBorda.classList.remove('ativo');
   }
   bebida.classList.toggle('ativo');
-  bebidaSelecionado = bebida.querySelector(
-    '.menu-bebida .caixa-texto h4'
-  ).innerHTML;
+  bebidaSelecionado = bebida.querySelector('h4').innerHTML;
+  R$bebida = bebida.querySelector('.num').innerHTML;
   liberarBotaoFecharPedido();
 }
 
@@ -35,9 +33,8 @@ function addBordaS(sobremesa) {
     tirarBorda.classList.remove('ativo');
   }
   sobremesa.classList.toggle('ativo');
-  sobremesaSelecionado = sobremesa.querySelector(
-    '.menu-sobremesa .caixa-texto h4'
-  ).innerHTML;
+  sobremesaSelecionado = sobremesa.querySelector('h4').innerHTML;
+  R$sobremesa = sobremesa.querySelector('.num').innerHTML;
   liberarBotaoFecharPedido();
 }
 
@@ -52,6 +49,24 @@ function liberarBotaoFecharPedido() {
       }
     }
   }
+  const textoP = document.querySelector('.caixa-pedido .prato .texto');
+  textoP.innerHTML = pratoSelecionado;
+  /* */
+  const textoB = document.querySelector('.caixa-pedido .bebida .texto');
+  textoB.innerHTML = bebidaSelecionado;
+  /* */
+  const textoS = document.querySelector('.caixa-pedido .sobremesa .texto');
+  textoS.innerHTML = sobremesaSelecionado;
+  /* */
+  const valorP = document.querySelector('.caixa-pedido .prato .valor');
+  valorP.innerHTML = R$prato;
+  /* */
+  const valorB = document.querySelector('.caixa-pedido .bebida .valor');
+  valorB.innerHTML = R$prato;
+  /* */
+  const valorS = document.querySelector('.caixa-pedido .sobremesa .valor');
+  valorS.innerHTML = R$prato;
+  /* */
 }
 
 function containerConfirma() {
