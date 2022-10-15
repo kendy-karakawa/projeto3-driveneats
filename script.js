@@ -52,31 +52,6 @@ function liberarBotaoFecharPedido() {
       }
     }
   }
-  const textoP = document.querySelector('.caixa-pedido .prato .texto');
-  textoP.innerHTML = pratoSelecionado;
-  /* */
-  const textoB = document.querySelector('.caixa-pedido .bebida .texto');
-  textoB.innerHTML = bebidaSelecionado;
-  /* */
-  const textoS = document.querySelector('.caixa-pedido .sobremesa .texto');
-  textoS.innerHTML = sobremesaSelecionado;
-  /* */
-  const valorP = document.querySelector('.caixa-pedido .prato .valor');
-  valorP.innerHTML = R$prato;
-  /* */
-  const valorB = document.querySelector('.caixa-pedido .bebida .valor');
-  valorB.innerHTML = R$prato;
-  /* */
-  const valorS = document.querySelector('.caixa-pedido .sobremesa .valor');
-  valorS.innerHTML = R$prato;
-  /* */
-  calculoTotal =
-    converterVirguraParaPonto(R$prato) +
-    converterVirguraParaPonto(R$bebida) +
-    converterVirguraParaPonto(R$sobremesa);
-  /* */
-  const valorT = document.querySelector('.caixa-pedido .total .valor');
-  valorT.innerHTML = `R$ ${converterPontoParaVirgula(calculoTotal)}`;
 }
 
 function converterVirguraParaPonto(valor) {
@@ -90,6 +65,35 @@ function converterPontoParaVirgula(valor) {
 function containerConfirma() {
   const container = document.querySelector('.container-confirma');
   container.classList.remove('escondido');
+  /* */
+  nome = prompt('Qual o seu nome ?');
+  endereco = prompt('Qual o seu endereço ?');
+  /* */
+  const textoP = document.querySelector('.caixa-pedido .prato .texto');
+  textoP.innerHTML = pratoSelecionado;
+  /* */
+  const textoB = document.querySelector('.caixa-pedido .bebida .texto');
+  textoB.innerHTML = bebidaSelecionado;
+  /* */
+  const textoS = document.querySelector('.caixa-pedido .sobremesa .texto');
+  textoS.innerHTML = sobremesaSelecionado;
+  /* */
+  const valorP = document.querySelector('.caixa-pedido .prato .valor');
+  valorP.innerHTML = R$prato;
+  /* */
+  const valorB = document.querySelector('.caixa-pedido .bebida .valor');
+  valorB.innerHTML = R$bebida;
+  /* */
+  const valorS = document.querySelector('.caixa-pedido .sobremesa .valor');
+  valorS.innerHTML = R$sobremesa;
+  /* */
+  calculoTotal =
+    converterVirguraParaPonto(R$prato) +
+    converterVirguraParaPonto(R$bebida) +
+    converterVirguraParaPonto(R$sobremesa);
+  /* */
+  const valorT = document.querySelector('.caixa-pedido .total .valor');
+  valorT.innerHTML = `R$ ${converterPontoParaVirgula(calculoTotal)}`;
 }
 
 function cancelar() {
@@ -102,7 +106,10 @@ function WhatsApp() {
   - Prato: ${pratoSelecionado}
   - Bebida: ${bebidaSelecionado}
   - Sobremesa: ${sobremesaSelecionado}
-  Total: R$ ${converterPontoParaVirgula(calculoTotal)}`;
+  Total: R$ ${converterPontoParaVirgula(calculoTotal)}
+  
+  Nome: ${nome}
+  Endereço: ${endereco}`;
 
   let textoCodificado = encodeURIComponent(texto);
   console.log(textoCodificado);
